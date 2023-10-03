@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+  
+  
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e2dcf5;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+body > div {
+    background-color: #CCBBFF;
+    padding: 5%;
+    border-radius: 20px 5px;
+    box-shadow: inset 0 0 1em rgb(113, 60, 156);
+    
+}
+
+section {
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    margin: 5px;
+}
+
+section > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.275);
+    transition: .5s;
+}
+
+section > div:hover {
+    background-color: #ccc3e5;
+    transition: .5s;
+}
+
+input {
+    padding: .5rem;
+    border: 0 none;
+    border-bottom: 1px solid black;
+    background: #f3f1f7;
+    outline: none; 
+}
+  
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+  
+button {
+    background: #59429d;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: .2rem;
+    margin-right: 2%;
+    margin-left: 1%;
+    color: #ffffff;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.bt-confirmar {
+    padding: .5rem;
+}
+
+/* Elemento de classe "button" com o estado da pseudoclasse "hover" */
+button:hover {
+    background: #ab9dd6;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+/* Elementos de classe botão e de tag <select> */
+button {
+    cursor: pointer;
+}
+
+  
