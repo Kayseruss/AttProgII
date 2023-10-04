@@ -8,29 +8,23 @@ function App() {
   const [idade, setIdade] = useState(null);
 
   const calculateidade = () => {
-    if (!nome || !dataNascimento) { // Se o nome ou data de nascimento não forem preenchidos
+    if (!nome || !dataNascimento) {
       alert('Por favor, insira seu nome e sua data de nascimento.');
       return;
     }
 
-    const dataNascimentoObj = new Date(dataNascimento); //  Data de nascimento fornecida pelo usuário, agora no formato de objeto 'Date'
-    const dataAtual = new Date(); // Pega a data atual
+    const dataNascimentoObj = new Date(dataNascimento);
+    const dataAtual = new Date();
 
-    if (dataNascimentoObj >= dataAtual) { // Se data atual for maior ou igual à atual
-      alert('A data de nascimento não pode ser no futuro.');
+    if (dataNascimentoObj >= dataAtual) { 
+      alert('A data de nascimento está errada ou está no futuro!');
       return;
     }
 
-    const idadeMilissegundos = dataAtual - dataNascimentoObj; // calcula o tempo de vida
-    const idadeAnos = Math.floor(idadeMilissegundos / (365 * 24 * 60 * 60 * 1000)); // Converte para anos
-    /*
-      | 365 é o número de dias em um ano.
-      | 24 é o número de horas em um dia.
-      | 60 é o número de minutos em uma hora.
-      | 60 é o número de segundos em um minuto.
-      | 1000 é o número de milissegundos em um segundo. 
-      <!--Portanto, multiplicando todas essas partes, teremos o número de milissegundos em um ano.-->
-    */
+    const idadeMilissegundos = dataAtual - dataNascimentoObj;
+    const idadeAnos = Math.floor(idadeMilissegundos / (365 * 24 * 60 * 60 * 1000));
+    
+
     setIdade(idadeAnos); 
   };
 
@@ -41,17 +35,17 @@ function App() {
       </div>
       <div className='informacoes'>
         <h1>Descubra sua idade!</h1>
-        <label>Nome completo:</label>
+        <label>Seu Nome :</label>
         <input
           type="text"
           value={nome}
-          onChange={(e) => setNome(e.target.value)} // Evento que atribui o nome incerido para o 'setNome'
+          onChange={(e) => setNome(e.target.value)} 
         />
         <label>Data de Nascimento:</label>
         <input
           type="date"
           value={dataNascimento}
-          onChange={(e) => setdataNascimento(e.target.value)} // Evento que atribui o data incerida para o 'setdataNascimento'
+          onChange={(e) => setdataNascimento(e.target.value)}
         />
         <button onClick={calculateidade}>Calcular Idade</button>
         {idade !== null && <p>{nome}, sua idade é: {idade} anos</p>}
@@ -62,5 +56,3 @@ function App() {
 
 export default App;
 
-
-// lissandra.fischer@ifc.edu.br
