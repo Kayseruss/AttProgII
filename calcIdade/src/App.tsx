@@ -34,7 +34,7 @@ function App() {
             <img src={logo} alt="React logo" />
       </div>
       <div className='informacoes'>
-        <h1>Descubra sua idade!</h1>
+        <h1>Descubra Aqui sua idade!</h1>
         <label>Seu Nome :</label>
         <input
           type="text"
@@ -48,7 +48,7 @@ function App() {
           onChange={(e) => setdataNascimento(e.target.value)}
         />
         <button onClick={calculateidade}>Calcular Idade</button>
-        {idade !== null && <p>{nome}, sua idade é: {idade} anos</p>}
+        {idade !== null && <p>{nome}, Você tem {idade} Anos</p>}
       </div>
     </div>
   );
